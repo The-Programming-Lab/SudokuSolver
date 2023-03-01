@@ -43,7 +43,13 @@ class Checker():
     
     def checkSolved(self, board):
         return self.checkAll(board) and 0 not in board
-    
+
+    def findNextEmptyCell(self, board):
+        for i in range(self.boardSize):
+            for j in range(self.boardSize):
+                if board[i][j] == 0:
+                    return [i,j]
+
 # main
 if __name__ == '__main__':
     NUMBER = 100_0
